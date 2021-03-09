@@ -1,17 +1,19 @@
-# Put title of your app here
+# Count-Er
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/lokhandeyogesh7/DevChallengeWeek2/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
+It's a count down timer app for #AndroidDevChallenge which has 60 seconds count down timer set.
 
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
+I was not sure about how I will work with Jetpack compose, but google codelabs has helped a lot in completing this challenge
 
 
 ## :camera_flash: Screenshots
