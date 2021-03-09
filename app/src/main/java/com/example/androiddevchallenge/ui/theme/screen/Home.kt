@@ -46,7 +46,6 @@ import com.example.androiddevchallenge.ui.theme.component.RoundView
 fun HomeScreen() {
     Surface(color = MaterialTheme.colors.background) {
         val timeElapsed = remember(calculation = { mutableStateOf(0L) })
-        val totalTime = 60
         val countStarted = remember(calculation = { mutableStateOf(false) })
 
         Scaffold(
@@ -60,7 +59,7 @@ fun HomeScreen() {
             },
             content = {
                 val percentageTime =
-                    ((totalTime - timeElapsed.value) / totalTime.toFloat())
+                    ((60 - timeElapsed.value) / 60.toFloat())
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -86,7 +85,7 @@ fun HomeScreen() {
                                 timer.onFinish()
                             } else {
                                 countStarted.value = true
-                                startTimer(timeElapsed, totalTime.toLong(), countStarted)
+                                startTimer(timeElapsed, countStarted)
                             }
                         },
                         modifier = Modifier
@@ -104,10 +103,9 @@ fun HomeScreen() {
 
 private fun startTimer(
     timeElapsed: MutableState<Long>,
-    totalTime: Long,
     countStarted: MutableState<Boolean>
 ) {
-    timer = object : CountDownTimer(totalTime * 1000, 1000) {
+    timer = object : CountDownTimer(60 * 1000, 1000) {
         override fun onTick(millisUntilFinished: Long) {
             timeElapsed.value = millisUntilFinished / 1000
             countStarted.value = true
