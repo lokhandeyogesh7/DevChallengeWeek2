@@ -19,14 +19,10 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.animation.core.*
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.ui.theme.screen.HomeScreen
-
 
 lateinit var timer: CountDownTimer
 
@@ -43,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 @Composable
-fun MyApp(){
+fun MyApp() {
     HomeScreen()
 }
 
@@ -62,4 +58,3 @@ fun DarkPreview() {
         MyApp()
     }
 }
-
